@@ -1,3 +1,22 @@
-<p>
-  billboard-list works!
-</p>
+<div class="panel panel-default" style="margin-top:10px;">
+  <div class="panel-body" style="position:relative">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th *ngFor="let billboard of billboards">
+              {{billboard}}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of rows">
+            <td *ngFor="let billboard of billboards">
+              {{row[billboard]}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
